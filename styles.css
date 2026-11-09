@@ -1,0 +1,94 @@
+:root {
+  --bg: #0b1020;
+  --panel: #121b2d;
+  --panel-strong: #1d2942;
+  --accent: #8b5cf6;
+  --accent-2: #22d3ee;
+  --text: #edf2ff;
+  --muted: #a9b5d0;
+  --shadow: rgba(8, 12, 24, 0.55);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #0b1020 0%, #121b2d 40%, #0f172a 100%);
+  color: var(--text);
+}
+
+.app {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 48px 24px 64px;
+}
+
+.topbar {
+  margin-bottom: 28px;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--accent-2);
+  font-size: 0.72rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 4rem);
+  line-height: 1;
+}
+
+.emote-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 22px;
+}
+
+.emote-card {
+  background: rgba(18, 27, 45, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 22px;
+  padding: 22px 18px 18px;
+  box-shadow: 0 18px 35px var(--shadow);
+  transition: transform 0.18s ease, border-color 0.18s ease;
+}
+
+.emote-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(34, 211, 238, 0.5);
+}
+
+.emote-image {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  border-radius: 16px;
+  background: radial-gradient(circle at top, rgba(139, 92, 246, 0.2), rgba(15, 23, 42, 0.3));
+  padding: 10px;
+}
+
+.emote-name {
+  display: block;
+  margin-top: 18px;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--text);
+}
+
+.emote-tag {
+  margin-top: 8px;
+  display: block;
+  text-align: center;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
